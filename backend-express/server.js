@@ -17,7 +17,7 @@ const {fetchDailyNetellerAccounts} = require('./queries/neteller-daily');
 const {fetchMonthlyNetellerAccounts} = require('./queries/neteller-monthly');
 // connect to MongoDB
 
-mongoose.connect('mongodb://localhost:27017/ewallet-cashback', { useNewUrlParser: true });
+mongoose.connect(LOCAL_DB_URL, { useNewUrlParser: true });
 // file upload
 app.use(fileUpload());
 // use cors and helmet
